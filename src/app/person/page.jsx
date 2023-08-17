@@ -5,9 +5,9 @@ import React from "react";
 
 const person = () => {
   return (
-    <div className="h-screen md:flex bg-slate-50">
+    <div className="h-screen overflow-auto md:flex bg-slate-50">
       <SideNav />
-      <div className="w-full flex flex-col gap-12 items-center p-3 md:p-12">
+      <div className="w-full overflow-auto flex flex-col gap-12 items-center p-3 md:p-12">
         <div>
           <form>
             <Search />

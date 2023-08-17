@@ -7,6 +7,8 @@ const Input = ({ type, id, name, place }) => {
         className="border border-orange-700 p-2 px-3 text-orange-700 placeholder:text-orange-700 rounded-full"
         type={type}
         placeholder={place}
+        name={name}
+        id={id}
       />
     </div>
   );

@@ -4,6 +4,7 @@ import NavButton from "./NavButton";
 import { BsPersonPlusFill } from "react-icons/bs";
 import { BiMenu, BiSolidMoviePlay } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const SideNav = () => {
   const navLinks = [
@@ -24,6 +25,7 @@ const SideNav = () => {
     },
   ];
   const [navBtn, setNavBtn] = useState(false);
+  const currentLink = usePathname();
   return (
     <div className="h-fit md:h-full bg-orange-200 w-full md:w-fit">
       <div
@@ -38,7 +40,7 @@ const SideNav = () => {
         }`}
       >
         {navLinks.map((item, index) => (
-          <NavButton key={index} item={item} />
+          <NavButton key={index} item={item} currentLink={currentLink} />
         ))}
       </div>
     </div>

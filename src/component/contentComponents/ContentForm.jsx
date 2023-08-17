@@ -3,7 +3,7 @@ import Input from "../inputs/Input";
 
 const ContentForm = () => {
   return (
-    <form className="w-full flex flex-col">
+    <form className="w-full flex flex-col gap-3">
       <input type="file" name="cover" id="cover" className="hidden" />
       <label
         htmlFor="cover"
@@ -18,6 +18,9 @@ const ContentForm = () => {
       >
         Photo
       </label>
+      <div className="w-full flex flex-col gap-3 items-center">
+        <Input name={"name"} type={"text"} id={"name"} place={"name"} />
+      </div>
     </form>
   );
 };
